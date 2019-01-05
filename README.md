@@ -1,2 +1,2 @@
-# Arkanoid_IEP
+# Arkanoid IEP
 Arkanoid game implementation in C++ for uni.
