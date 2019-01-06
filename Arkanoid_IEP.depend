@@ -412,5 +412,19 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1546801291 c:\users\mada\desktop\arkanoid_iep\globals.h
+1546802043 c:\users\mada\desktop\arkanoid_iep\globals.h
+
+1546801848 source:c:\users\mada\desktop\arkanoid_iep\ball.cpp
+	"Ball.h"
+
+1546802082 c:\users\mada\desktop\arkanoid_iep\ball.h
+	<SFML/Graphics.hpp>
+	"globals.h"
+
+1546802513 source:c:\users\mada\desktop\arkanoid_iep\paddle.cpp
+	"Paddle.h"
+
+1546802407 c:\users\mada\desktop\arkanoid_iep\paddle.h
+	<SFML/Graphics.hpp>
+	"globals.h"
 
