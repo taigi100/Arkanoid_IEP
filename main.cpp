@@ -91,6 +91,17 @@ bool isIntersecting(T1& mA, T2& mB)
             mA.top() <= mB.bottom();
 }
 
+void testCollision(Paddle& mPaddle, Ball& mBall)
+{
+    if(!isIntersecting(mPaddle, mBall))
+        return;
+    mBall.velocity.y = -ballVelocity;
+    if(mBall.x() < mPaddle.x())
+        mBall.velocity.x = -ballVelocity;
+    else
+        mBall.velocity.x = ballVelocity;
+}
+
 int main()
 {
     Ball ball(windowWidth / 2, windowHeight / 2);
@@ -110,6 +121,8 @@ int main()
 
         window.clear(Color::Black);
         if(Keyboard::isKeyPressed(Keyboard::Key::Escape)) break;
+
+        testCollision(paddle, ball);
 
         ball.update();
         paddle.update();
