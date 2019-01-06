@@ -4,10 +4,11 @@
 using namespace std;
 using namespace sf;
 
-struct Ball
+class Ball
 {
-     CircleShape shape;
-     Vector2f velocity{-ballVelocity, -ballVelocity};
+    public:
+    CircleShape shape;
+    Vector2f velocity{-ballVelocity, -ballVelocity};
 
      Ball(float mX, float mY)
     {
@@ -43,9 +44,9 @@ struct Ball
     float bottom() { return y() + shape.getRadius(); }
 };
 
-struct Paddle
+class Paddle
 {
-
+    public:
     RectangleShape shape;
     Vector2f velocity;
 
@@ -78,8 +79,9 @@ struct Paddle
     float bottom() { return y() + shape.getSize().y / 2.f; }
 
 };
-struct Brick
+class Brick
 {
+    public:
     RectangleShape shape;
     bool destroyed = false;
 
