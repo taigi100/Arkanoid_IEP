@@ -4,10 +4,11 @@
 
 #include <SFML/Graphics.hpp>
 #include "globals.h"
+#include "BoxCollider.h"
 
 using namespace sf;
 
-class Paddle
+class Paddle : public BoxCollider
 {
     public:
     RectangleShape shape;

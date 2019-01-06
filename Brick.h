@@ -3,11 +3,12 @@
 
 #include <SFML/Graphics.hpp>
 #include "globals.h"
+#include "BoxCollider.h"
 
 using namespace sf;
 
 
-class Brick
+class Brick : public BoxCollider
 {
     public:
     RectangleShape shape;

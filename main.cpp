@@ -7,19 +7,9 @@
 using namespace std;
 using namespace sf;
 
-
-
-template <class T1, class T2>
-bool isIntersecting(T1& mA, T2& mB)
-{
-    return mA.right() >= mB.left() && mA.left() <= mB.right() &&
-            mA.bottom() >= mB.top() &&
-            mA.top() <= mB.bottom();
-}
-
 void testCollision(Paddle& mPaddle, Ball& mBall)
 {
-    if(!isIntersecting(mPaddle, mBall))
+    if(!mPaddle.isIntersecting(mBall))
         return;
     mBall.velocity.y = -ballVelocity;
     if(mBall.x() < mPaddle.x())
@@ -30,7 +20,7 @@ void testCollision(Paddle& mPaddle, Ball& mBall)
 
 void testCollision(Brick& mBrick, Ball& mBall)
 {
-    if(!isIntersecting(mBrick, mBall))
+    if(!mBrick.isIntersecting(mBall))
         return;
     mBrick.destroyed = true;
 

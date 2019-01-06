@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1546801184 source:c:\users\mada\desktop\arkanoid_iep\main.cpp
+1546803887 source:c:\users\mada\desktop\arkanoid_iep\main.cpp
 	<SFML/Graphics.hpp>
 	"globals.h"
+	"Ball.h"
+	"Paddle.h"
+	"Brick.h"
 
 1525812018 c:\users\mada\desktop\arkanoid_iep\libs\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -417,14 +420,27 @@
 1546801848 source:c:\users\mada\desktop\arkanoid_iep\ball.cpp
 	"Ball.h"
 
-1546802082 c:\users\mada\desktop\arkanoid_iep\ball.h
+1546803828 c:\users\mada\desktop\arkanoid_iep\ball.h
 	<SFML/Graphics.hpp>
 	"globals.h"
+	"BoxCollider.h"
 
 1546802513 source:c:\users\mada\desktop\arkanoid_iep\paddle.cpp
 	"Paddle.h"
 
-1546802407 c:\users\mada\desktop\arkanoid_iep\paddle.h
+1546803853 c:\users\mada\desktop\arkanoid_iep\paddle.h
 	<SFML/Graphics.hpp>
 	"globals.h"
+	"BoxCollider.h"
+
+1546802736 source:c:\users\mada\desktop\arkanoid_iep\brick.cpp
+	"Brick.h"
+
+1546803843 c:\users\mada\desktop\arkanoid_iep\brick.h
+	<SFML/Graphics.hpp>
+	"globals.h"
+	"BoxCollider.h"
+
+1546804226 c:\users\mada\desktop\arkanoid_iep\boxcollider.h
+	<iostream>
 
