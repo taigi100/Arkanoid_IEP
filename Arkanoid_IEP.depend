@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1546795276 source:c:\users\mada\desktop\arkanoid_iep\main.cpp
+1546801184 source:c:\users\mada\desktop\arkanoid_iep\main.cpp
 	<SFML/Graphics.hpp>
+	"globals.h"
 
 1525812018 c:\users\mada\desktop\arkanoid_iep\libs\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -410,4 +411,6 @@
 	<SFML/Graphics/PrimitiveType.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
+
+1546801291 c:\users\mada\desktop\arkanoid_iep\globals.h
 
