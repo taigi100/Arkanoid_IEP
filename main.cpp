@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
+#include <cmath>
 #include "globals.h"
 #include "Ball.h"
 #include "Paddle.h"
 #include "Brick.h"
+#include "MainMenu.h"
 
 using namespace std;
 using namespace sf;
@@ -58,6 +60,9 @@ int main()
     RenderWindow window(VideoMode(windowWidth, windowHeight), "Arkanoid");
     window.setFramerateLimit(60);
 
+    GameState gameState = GameState::mainMenu;
+    MainMenu* menu = new MainMenu();
+
     while (window.isOpen())
     {
         Event event;
@@ -65,29 +70,44 @@ int main()
         {
             if (event.type == Event::Closed)
                 window.close();
+            //else if(event.type == Event::KeyPressed) {
+            //    cout << "Got a press";
+            //}
         }
 
 
         window.clear(Color::Black);
         if(Keyboard::isKeyPressed(Keyboard::Key::Escape)) break;
+        if(Keyboard::isKeyPressed(Keyboard::Key::P) && gameState == GameState::mainMenu) {
+                gameState = GameState::Game;
+                continue;
+        }
+
+        switch(gameState) {
+            case GameState::mainMenu: {
+                menu->draw(window);
+                break;
+            }
+            case GameState::Game: {
+                ball.update();
+                paddle.update();
+                testCollision(paddle, ball);
+
+                for(auto& brick : bricks) testCollision(brick, ball);
+
+                bricks.erase(remove_if(begin(bricks), end(bricks), [](const Brick& mBrick)
+                    {
+                        return mBrick.destroyed;
+
+                        }),end(bricks));
 
 
-        ball.update();
-        paddle.update();
-        testCollision(paddle, ball);
-
-        for(auto& brick : bricks) testCollision(brick, ball);
-
-        bricks.erase(remove_if(begin(bricks), end(bricks), [](const Brick& mBrick)
-            {
-                return mBrick.destroyed;
-
-                }),end(bricks));
-
-
-        window.draw(ball.shape);
-        window.draw(paddle.shape);
-        for(auto& brick : bricks) window.draw(brick.shape);
+                window.draw(ball.shape);
+                window.draw(paddle.shape);
+                for(auto& brick : bricks) window.draw(brick.shape);
+                break;
+            }
+        }
 
         window.display();
     }
