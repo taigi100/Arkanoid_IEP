@@ -35,7 +35,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-DSMFL_STATIC" />
 		</Compiler>
+		<Linker>
+			<Add library="libs/SFML-2.5.1/lib/libsfml-graphics.a" />
+			<Add library="libs/SFML-2.5.1/lib/libsfml-window.a" />
+			<Add library="libs/SFML-2.5.1/lib/libsfml-system.a" />
+		</Linker>
+		<Unit filename="Ball.cpp" />
+		<Unit filename="Ball.h" />
+		<Unit filename="BoxCollider.h" />
+		<Unit filename="Brick.cpp" />
+		<Unit filename="Brick.h" />
+		<Unit filename="Paddle.cpp" />
+		<Unit filename="Paddle.h" />
+		<Unit filename="globals.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
