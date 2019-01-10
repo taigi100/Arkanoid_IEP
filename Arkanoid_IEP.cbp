@@ -52,6 +52,8 @@
 		<Unit filename="Brick.h" />
 		<Unit filename="Paddle.cpp" />
 		<Unit filename="Paddle.h" />
+		<Unit filename="ResultScreen.cpp" />
+		<Unit filename="ResultScreen.h" />
 		<Unit filename="globals.h" />
 		<Unit filename="include/MainMenu.h" />
 		<Unit filename="main.cpp" />

@@ -5,6 +5,7 @@
 	"Ball.h"
 	"Paddle.h"
 	"Brick.h"
+	"ResultScreen.h"
 
 1525812018 c:\users\mada\desktop\arkanoid_iep\libs\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -444,10 +445,10 @@
 1546804226 c:\users\mada\desktop\arkanoid_iep\boxcollider.h
 	<iostream>
 
-1546881578 source:g:\arkanoid_iep\ball.cpp
+1547158043 source:g:\arkanoid_iep\ball.cpp
 	"Ball.h"
 
-1546881578 g:\arkanoid_iep\ball.h
+1547158069 g:\arkanoid_iep\ball.h
 	<SFML/Graphics.hpp>
 	"globals.h"
 	"BoxCollider.h"
@@ -861,7 +862,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1546885342 g:\arkanoid_iep\globals.h
+1547158182 g:\arkanoid_iep\globals.h
 
 1546881578 g:\arkanoid_iep\boxcollider.h
 	<iostream>
@@ -882,14 +883,17 @@
 	"globals.h"
 	"BoxCollider.h"
 
-1546886452 source:g:\arkanoid_iep\main.cpp
+1547158273 source:g:\arkanoid_iep\main.cpp
 	<SFML/Graphics.hpp>
 	<cmath>
+	<cstring>
+	<stdlib.h>
 	"globals.h"
 	"Ball.h"
 	"Paddle.h"
 	"Brick.h"
 	"MainMenu.h"
+	"ResultScreen.h"
 
 1546886246 g:\arkanoid_iep\include\mainmenu.h
 	<SFML/graphics.hpp>
@@ -897,4 +901,11 @@
 
 1546886375 source:g:\arkanoid_iep\src\mainmenu.cpp
 	"MainMenu.h"
+
+1547156598 g:\arkanoid_iep\resultscreen.h
+	<SFML/graphics.hpp>
+	<iostream>
+
+1547156611 source:g:\arkanoid_iep\resultscreen.cpp
+	"ResultScreen.h"
 

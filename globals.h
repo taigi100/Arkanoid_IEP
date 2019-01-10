@@ -7,5 +7,5 @@ constexpr float paddleWidth(100.f), paddleHeight(20.f), paddleVelocity(6.f);
 constexpr float blockWidth(60.f), blockHeight(20.f);
 constexpr int countBlocksX(11), countBlocksY(4);
 
-enum GameState { mainMenu, Game, Win, Lose};
+enum GameState { mainMenu, Game, Win, Lose, initGame};
 #endif

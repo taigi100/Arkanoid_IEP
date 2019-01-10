@@ -23,3 +23,12 @@ void Ball::update()
     else if(bottom() > windowHeight)
         velocity.y = -ballVelocity;
 }
+
+Ball::setPosition(float mX, float mY) {
+    shape.setPosition(mX, mY);
+}
+
+Ball::setVelocity(float dx, float dy) {
+    velocity.x = dx;
+    velocity.y = dy;
+}

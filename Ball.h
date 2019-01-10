@@ -14,6 +14,8 @@ class Ball : public BoxCollider
     Vector2f velocity{-ballVelocity, -ballVelocity};
 
     Ball(float mX, float mY);
+    setPosition(float mX, float mY);
+    setVelocity(float dx, float dy);
 
     void update();
 
